@@ -1,4 +1,3 @@
-import pyautogui
 import time
 import sys
 
@@ -13,15 +12,12 @@ class Func1:
 	        sys.stdout.write("Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
 	        sys.stdout.flush()
 	        self.countdown -= 1
-	        
-	    self.square()
 
-	def square( self ):
-		pyautogui.moveTo(400, 400, duration = 1)
-		pyautogui.moveTo(400, 600, duration = 1)
-		pyautogui.moveTo(600, 600, duration = 1)
-		pyautogui.moveTo(600, 400, duration = 1)
-		pyautogui.moveTo(400, 400, duration = 1)
+	    self.alert1()
+
+	def alert1( self ):
+		sys.stdout.write("Thread " + str(self.name) + " Done !\n")
+
 
 
 
