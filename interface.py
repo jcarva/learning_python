@@ -1,5 +1,3 @@
-import time
-import sys
 from func1 import Func1
 from func2 import Func2
 from func3 import Func3
