@@ -1,10 +1,7 @@
 import threading
 import time
 import sys
-
-"""Describe which functions we'll use"""
-from frank import func1, func2, func3, func4
-functions = ['func1', 'func2', 'func3', 'func4']
+from interface import *
 
 COUNTDOWN = 5
 lock = threading.Lock()
@@ -20,11 +17,11 @@ class Process(threading.Thread):
 
     def run(self):
         global lock
-        while True: ##Runnig in Loop
-            lock.acquire()
-            eval(self.name)(self.countdown, self.name)
-            lock.release()
-            time.sleep(1)
+        #while True: ##Runnig in Loop
+        lock.acquire()
+        eval(self.name)(self.countdown, self.name)
+        lock.release()
+        time.sleep(1)
 
 
 def main():

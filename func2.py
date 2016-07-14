@@ -14,6 +14,8 @@ class Func2:
 	        sys.stdout.flush()
 	        self.countdown -= 1
 
+	    self.square()
+
 	def square( self ):
 		pyautogui.moveTo(800, 400, duration = 1)
 		pyautogui.moveTo(1000, 400, duration = 1)

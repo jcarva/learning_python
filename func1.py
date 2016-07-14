@@ -13,6 +13,8 @@ class Func1:
 	        sys.stdout.write("Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
 	        sys.stdout.flush()
 	        self.countdown -= 1
+	        
+	    self.square()
 
 	def square( self ):
 		pyautogui.moveTo(400, 400, duration = 1)
