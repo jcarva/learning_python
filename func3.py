@@ -1,12 +1,13 @@
+from func_base import FuncBase
 import time
 import sys
 
-class Func3:
+class Func3(FuncBase):
 	def __init__(self, countdown, name):
 		self.countdown = countdown
 		self.name = name
 
-	def exe( self ):
+	def exe(self):
 	    while (self.countdown):
 	        time.sleep(0.3)
 	        sys.stdout.write("Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
@@ -15,5 +16,5 @@ class Func3:
 
 	    self.__alert3()
 
-	def __alert3( self ):
+	def __alert3(self):
 		sys.stdout.write("Thread " + str(self.name) + " Done !\n")
