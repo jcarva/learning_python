@@ -7,7 +7,6 @@ from func4 import Func4
 functions = ['func1', 'func2', 'func3', 'func4']
 
 
-
 """Declare which functions we'll use"""
 
 def func1(countdown, name):
