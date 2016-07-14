@@ -1,7 +1,7 @@
-from func1 import Func1
-from func2 import Func2
-from func3 import Func3
-from func4 import Func4
+from functions.func1 import Func1
+from functions.func2 import Func2
+from functions.func3 import Func3
+from functions.func4 import Func4
 
 """Describe which functions we'll use"""
 functions = ['func1', 'func2', 'func3', 'func4']
