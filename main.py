@@ -1,4 +1,3 @@
-import pyautogui
 import threading
 import time
 import sys
@@ -20,11 +19,12 @@ class Process(threading.Thread):
         self.countdown = COUNTDOWN
 
     def run(self):
-
-        # while True: #Running in Loop
-        lock.acquire()
-        eval(self.name)(self.countdown, self.name)
-        lock.release()
+        global lock
+        while True: ##Runnig in Loop
+            lock.acquire()
+            eval(self.name)(self.countdown, self.name)
+            lock.release()
+            time.sleep(1)
 
 
 def main():
