@@ -13,7 +13,7 @@ class Func4:
 	        sys.stdout.flush()
 	        self.countdown -= 1
 
-	    self.alert3()
+	    self.__alert4()
 
-	def alert3( self ):
+	def __alert4( self ):
 		sys.stdout.write("Thread " + str(self.name) + " Done !\n")
