@@ -1,5 +1,5 @@
 <a href="https://www.python.org//">
-    <img src="https://www.python.org/static/img/python-logo.png" alt="python_logo" title="Python Programmin Language" align="right" />
+    <img style="max-width: 30%;" src="https://cdn.fedoramagazine.org/wp-content/uploads/2015/11/Python_logo.png" alt="python_logo" title="Python Programmin Language" align="right" />
 </a>
 
 # Learning Python
