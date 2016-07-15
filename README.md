@@ -1,31 +1,69 @@
-## Synopsis
+<a href="https://www.python.org//">
+    <img src="https://www.python.org/static/img/python-logo.png" alt="python_logo" title="Python Programmin Language" align="right" />
+</a>
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+# Learning Python
 
-## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+*Pet-project. Use at your own risk. Low test coverage ratio.*
+
+**Have a question or suggestion?**																												
+Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?trk=nav_responsive_tab_profile_pic), send an email to jaelsonjunior99@gmail.com, or create a pull request in this project.
+
+
+---
+
+## Introduction
+
+**Learning Python** basically is a project to I know and learn *Python* language programming, its features and syntax. In this project I will try to use different programming concepts, In this project I will try to use different programming concepts, just to learn and get intimacy on Python.
+
+---
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+In my job I received a task to coding a program, it code executes many threads in parallel way, may be a concurrency to acess specific resources or not. I learned parallel programming using C/C++, but this time I would like to do the task in a different way, after read a little about new languages programming for me, I decided to use Python, beacause I considered this language is so much easy to learn and very functional.
 
-## Installation
+---
 
-Provide code examples and explanations of how to get the project.
+## Tecnologies
+
+Developed using:
+
+	python 2.7.6
+	pip 8.1.2
+---
+
+## Setup
+
+The command below in the root project path allows you to easily install Python packages.
+
+	$ python setup.py install
+
+---
+
+## Run
+
+Using the following command you'll run the entire project.
+
+	$ python main.py
+
+---
 
 ## API Reference
 
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
-
-Describe and show how to run the tests with code examples.
+---
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+* Jaelson Carvalho ([jcarva](https://github.com/jcarva))
+
+---
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+This project is licensed under the terms of the **GNU GENERAL PUBLIC** license.
+>You can check out the full license [here](https://github.com/jcarva/learning_python/blob/master/LICENSE)
+
+---
