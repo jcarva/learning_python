@@ -3,24 +3,5 @@ from functions.func2 import Func2
 from functions.func3 import Func3
 from functions.func4 import Func4
 
-"""Describe which functions we'll use"""
-functions = ['func1', 'func2', 'func3', 'func4']
-
-
-"""Declare which functions we'll use"""
-
-def func1(countdown, name):
-	func1 = Func1(countdown, name)
-	func1.exe()
-
-def func2(countdown, name):
-	func2 = Func2(countdown, name)
-	func2.exe()
-
-def func3(countdown, name):
-	func3 = Func3(countdown, name)
-	func3.exe()
-
-def func4(countdown, name):
-	func4 = Func4(countdown, name)
-	func4.exe()
+"""Declare which object logic will run"""
+projects = [Func1('func1', 5), Func2('func2', 5), Func3('func3', 5)]
