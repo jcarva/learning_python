@@ -3,31 +3,33 @@ import time
 import sys
 from interface import *
 
-COUNTDOWN = 5
 lock = threading.Lock()
 
 class Process(threading.Thread):
 
-    def __init__(self, name):
-        sys.stdout.write("Making thread name " + str(name) + "\n")
+    def __init__(self, name, logic_object):
+        sys.stdout.write("Making thread " + str(name) + "\n")
         sys.stdout.flush()
         threading.Thread.__init__(self)
-        self.name = name
-        self.countdown = COUNTDOWN
+        self.logic_object = logic_object
 
     def run(self):
         global lock
         #while True: ##Runnig in Loop
-        lock.acquire()
-        eval(self.name)(self.countdown, self.name)
-        lock.release()
-        time.sleep(1)
+        for x in xrange(1,5):
+            lock.acquire()
+            self.logic_object.exe()
+            lock.release()
+            time.sleep(2)
 
 
 def main():
-    for thread_name in functions:
-        thread = Process(thread_name)
+
+    x = 1
+    for thread_logic in projects:
+        thread = Process(x, thread_logic)
         thread.start()
+        x+= 1
 
 if __name__ == '__main__':
     main()
