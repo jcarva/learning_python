@@ -11,10 +11,12 @@ class Func1(FuncBase):
 		self.setup_lock = 1
 
 	def exe(self):
+
+		if (self.setup_lock == 0):
+			self.__main_logic()
+
 		while (self.setup_lock == 1):
 			self.__setup()
-		
-		self.__main_logic()
 
 	def __setup(self):
 		sys.stdout.write("Thread " + str(self.name) + " live and running in the setup mode!\n")

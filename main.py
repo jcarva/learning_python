@@ -14,9 +14,10 @@ class Process(threading.Thread):
         self.logic_object = logic_object
 
     def run(self):
+        time.sleep(0.5)
         global lock
         #while True: ##Runnig in Loop
-        for x in xrange(1,5):
+        for x in xrange(3):
             lock.acquire()
             self.logic_object.exe()
             lock.release()
@@ -24,7 +25,6 @@ class Process(threading.Thread):
 
 
 def main():
-
     x = 1
     for thread_logic in projects:
         thread = Process(x, thread_logic)
