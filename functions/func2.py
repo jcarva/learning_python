@@ -8,7 +8,7 @@ class Func2(FuncBase):
 		self.src_countdown = countdown
 		self.countdown = countdown
 		self.name = name
-		self.setup_lock = 1
+		self.setup_lock = 1 #lock to able setup mode
 
 	def exe(self):
 		if (self.setup_lock == 0):
@@ -18,28 +18,30 @@ class Func2(FuncBase):
 				self.__setup()
 
 	def __setup(self):
-		sys.stdout.write("Thread " + str(self.name) + " live and running in the setup mode!\n")
+		sys.stdout.write("\n\nThread " + str(self.name) + " live and running in the setup mode!\n")
 
-		self.progress_bar("Setup Progress " + str(self.name) + " :")
-		load = raw_input("> Confirm Setup Loading(Y/n) : ")
+		self.progress_bar(" Setup Progress " + str(self.name) + " :")
+		load = raw_input(" > Confirm Setup Loading(Y/n) : ")
 
 		if (load == 'Y'):
 			self.setup_lock = 0
-			sys.stdout.write("Thread " + str(self.name) + " complete the setup mode!\n\n")
+			sys.stdout.write("Thread " + str(self.name) + " complete the setup mode!")
 		elif (load == 'n'):
-			sys.stdout.write("\nRetry Setup!\n\n")
+			sys.stdout.write("\nRetry Setup!")
 		else:
-			sys.stdout.write("Invalid option!\n")
+			sys.stdout.write("\nInvalid option!")
 
 	def __main_logic(self):
+	    sys.stdout.write("\n\nThread " + str(self.name) + " executing the main logic!\n")
 	    while (self.countdown):
 	        time.sleep(0.3)
-	        sys.stdout.write("Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
+	        sys.stdout.write(" Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
 	        sys.stdout.flush()
 	        self.countdown -= 1
 
 	    self.countdown = self.src_countdown
 	    self.__alert()
+	    sys.stdout.write("Thread " + str(self.name) + " complete the main logic!")
 
 	def __alert(self):
-		sys.stdout.write("Internal contdown restarted !\n\n")
+		sys.stdout.write("\n Internal contdown restarted !\n")

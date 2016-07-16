@@ -8,13 +8,13 @@ lock = threading.Lock()
 class Process(threading.Thread):
 
     def __init__(self, name, logic_object):
-        sys.stdout.write("Making thread " + str(name) + "\n")
+        sys.stdout.write("Building thread " + str(name) + "\n")
         sys.stdout.flush()
         threading.Thread.__init__(self)
         self.logic_object = logic_object
 
     def run(self):
-        time.sleep(1) # sync initial console message
+        time.sleep(len(projects) * 0.125) # sync initial console message
         global lock
         #while True: ##Runnig in Loop
         for x in xrange(3):
