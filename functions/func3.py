@@ -1,6 +1,7 @@
 from func_base import FuncBase
 import time
 import sys
+import requests
 
 class Func3(FuncBase):
 	def __init__(self, name, countdown):
@@ -8,7 +9,7 @@ class Func3(FuncBase):
 		self.src_countdown = countdown
 		self.countdown = countdown
 		self.name = name
-		self.setup_lock = 0 #lock to able setup mode
+		self.setup_lock = 1 #lock to able setup mode
 
 	def exe(self):
 		if (self.setup_lock == 0):
@@ -36,9 +37,12 @@ class Func3(FuncBase):
 
 	def __main_logic(self):
 	    sys.stdout.write("\n\nThread " + str(self.name) + " executing the main logic!\n")
+	    req = requests.get('http://www.w3schools.com/website/Customers_MYSQL.php')
+	    data = req.json()[2]
 	    while (self.countdown):
 	        time.sleep(0.3)
 	        sys.stdout.write(" Thread " + str(self.name) + " (" + str(self.countdown) + ")\n")
+	        print (data)
 	        sys.stdout.flush()
 	        self.countdown -= 1
 

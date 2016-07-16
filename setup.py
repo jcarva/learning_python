@@ -9,11 +9,14 @@ with open('LICENSE') as f:
 
 setup(
     name='learning_python',
-    version='1.0.0',
-    description='Simple example of python project',
+    version='0.0.1',
+    description='Simple python project',
     long_description=readme,
     author='Jaelson Carvalho',
     author_email='jaelsonjunior99@gmail.com',
     url='https://github.com/jcarva',
-    license=license
+    license=license,
+    install_requires=[
+        'requests',
+    ],
 )
