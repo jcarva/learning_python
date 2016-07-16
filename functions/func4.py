@@ -21,7 +21,7 @@ class Func4(FuncBase):
 	def __setup(self):
 		sys.stdout.write("Thread " + str(self.name) + " live and running in the setup mode!\n")
 
-		self.progress_bar("Setup Progress :", "Complete")
+		self.progress_bar("Setup Progress " + str(self.name) + " :")
 		load = raw_input("> Confirm Setup Loading(Y/n) : ")
 
 		if (load == 'Y'):
