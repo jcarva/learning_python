@@ -8,7 +8,7 @@ class Func1(FuncBase):
 		self.src_countdown = countdown
 		self.countdown = countdown
 		self.name = name
-		self.setup_lock = 0 #lock to able setup mode
+		self.setup_lock = 1 #lock to able setup mode
 
 	def exe(self):
 		if (self.setup_lock == 0):
@@ -21,13 +21,16 @@ class Func1(FuncBase):
 		sys.stdout.write("\n\nThread " + str(self.name) + " live and running in the setup mode!\n")
 
 		self.progress_bar(" Setup Progress " + str(self.name) + " :")
-		load = raw_input(" > Confirm Setup Loading(Y/n) : ")
+		load = raw_input(" > Confirm Setup Loading(Y/n) or Cancel Setup(C): ")
 
 		if (load == 'Y'):
 			self.setup_lock = 0
 			sys.stdout.write("Thread " + str(self.name) + " complete the setup mode!")
 		elif (load == 'n'):
 			sys.stdout.write("\nRetry Setup!")
+		elif (load == 'C'):
+			self.setup_lock = 0
+			sys.stdout.write("\nThank you!")
 		else:
 			sys.stdout.write("\nInvalid option!")
 

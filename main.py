@@ -16,8 +16,8 @@ class Process(threading.Thread):
     def run(self):
         time.sleep(len(projects) * 0.125) # sync initial console message
         global lock
-        #while True: ##Runnig in Loop
-        for x in xrange(3):
+        #while True: #Run infinite Loop
+        for x in xrange(3): # Run n times(n is the range)
             lock.acquire()
             self.logic_object.exe()
             lock.release()
