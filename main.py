@@ -14,7 +14,7 @@ class Process(threading.Thread):
         self.logic_object = logic_object
 
     def run(self):
-        time.sleep(0.5)
+        time.sleep(1) # sync initial console message
         global lock
         #while True: ##Runnig in Loop
         for x in xrange(3):
