@@ -15,13 +15,13 @@ Contact me on [Linkedin](https://www.linkedin.com/in/jaelson-carvalho-4b84a3a2?t
 
 ## Introduction
 
-**Learning Python** basically is a project to I know and learn *Python* language programming, its features and syntax. In this project I will try to use different programming concepts, In this project I will try to use different programming concepts, just to learn and get intimacy on *Python*.
+**Learning Python** is a project to I know and learn *Python* language programming, its features and syntax. In this project I will try to use different programming concepts, just to learn and get intimacy on *Python*.
 
 ---
 
 ## Motivation
 
-In my job I received a task to coding a program, it code executes many threads in parallel way, may be a concurrency to acess specific resources or not. I learned parallel programming using C/C++, but this time I would like to do the task in a different way, after read a little about new languages programming for me, I decided to use Python because I considered this language is so much easy to learn and very functional.
+In my job I received a task to coding a program that executes many threads in parallel way, may be a concurrency to acess specific resources or not. I learned parallel programming using C/C++, but this time I would like to do the task in a different way, after read a little about new programming languages for me, I decided to use Python because I considered this language is so much easy to learn and very functional.
 
 ---
 

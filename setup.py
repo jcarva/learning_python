@@ -19,4 +19,4 @@ setup(
     install_requires=[
         'requests',
     ],
-)
+    )
